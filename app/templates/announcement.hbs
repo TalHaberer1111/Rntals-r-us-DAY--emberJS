@@ -1,0 +1,11 @@
+{{new-announcement publish2="publish3"}}
+
+<ul>
+  {{#each model as |announcement|}}
+  <li>  {{announcement.message}}
+    <button {{action 'delete' announcement}}>Delete</button>
+  </li>
+  {{/each}}
+</ul>
+
+{{#link-to 'index'}}Back to Homepage{{/link-to}}
